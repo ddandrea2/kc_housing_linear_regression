@@ -22,14 +22,17 @@ Looking at the regression diagnostics, it can be concluded that all three assump
 
 ### Heterskedasticity
 Visualizing the data residuals versus predictions for the training data, it is apparent that the data is concentrated around in the center of the plot, and not randomly distributed. From the Breusch-Pagan test, the model residuals exhibit heterscedasticity. Both the Lagrange multiplier and F statistic are large (~725 and ~32.9, respectively), while their corresponding p-tests are extremely small (on a magnitude of -138), meaning the null hypothesis (homoskedasticity) is rejected.
+
 ![heteroskedasticity](/Graphs/download-1.png)
 
 ### Normality of residuals
 Based on the qqplot and Jarque-Bera test, the residuals violate the normality assumption. The qqplot shows that the residuals have distinctly thin tails. The Jarque-Bera test further coroborates this; the score is far from a score of 0 (~495), which would indicate a normal distribution, and the low chi-squared score (on a magnitude of -108) makes the test score significant at an alpha of 0.05. The residuals have a very slight skew, and the kurtosis measure points to a leptokurtic distribution, which was also indicated in the qqplot. These factors negatively impact the r-squared score.
+
 ![normality of resids](/Graphs/download.png)
 
 ### Linearity of features relative to target
 The feature that exhibited the greatest linearity with respect to the target was sqft_living; it can be seen from the plot below that this linear relationship is pretty loose. Other features were even less linearly related to the target, indicating a strong case for non-linear relationships between the features and the target.
+
 ![linearity](/Graphs/download-2.png)
 
 Taking all of this information into account, a linear model may not be the best model to use for this dataset, but a decent linear model was nevertheless created. For the realtor, it does give an idea of the important factors contributing to the sale price of a home out of a pool of features. Some of the features, such as liveable square footage, waterfront properties and renovations may not be surprising as being important. Other features, such as latitude and grade*sqft_living15 are more interesting.
