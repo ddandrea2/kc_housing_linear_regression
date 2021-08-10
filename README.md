@@ -10,6 +10,8 @@ Using OLS regression, the best performing model consisted of the following featu
 The final r-squared score for the train data was approximately 0.717, while the r-squared score for the test data was 0.712, meaning the model can explain the variation in home prices ~71.2% of the time. The model produces a RSE of $211,724, which is the average amount the selling price differs from what the model predicts. While there is no set standard by which to judge RSE, it's fair to say that producing an error this large may be problematic. The RSE is about 39.4% of the average selling price of $537,861, to put it into perspective.
 
 Looking at the regression diagnostics, it can be concluded that all three assumptions for the residuals of a linear regression model have most likely been violated. The distribution of the residuals is leptokurtic, they exhibit heterskedasticity, and the model variables may not have a linear relationship with the target.
+![heteroskedasticity](/Graphs/download-1.png)
+
 
 Taking all of this information into account, a linear model may not be the best model to use for this dataset, but a decent linear model was nevertheless created. For the realtor, it does give an idea of the important factors contributing to the sale price of a home out of a pool of features. Some of the features, such as liveable square footage, waterfront properties and renovations may not be surprising as being important. Other features, such as latitude and grade*sqft_living15 are more interesting.
 
