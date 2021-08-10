@@ -20,7 +20,7 @@ Looking at the regression diagnostics, it can be concluded that all three assump
 
 ## Regression Diagnostics
 
-### Heterskedasticity
+### Heteroskedasticity
 Visualizing the data residuals versus predictions for the training data, it is apparent that the data is concentrated around in the center of the plot, and not randomly distributed. From the Breusch-Pagan test, the model residuals exhibit heterscedasticity. Both the Lagrange multiplier and F statistic are large (~725 and ~32.9, respectively), while their corresponding p-tests are extremely small (on a magnitude of -138), meaning the null hypothesis (homoskedasticity) is rejected.
 
 ![heteroskedasticity](/Graphs/download-1.png)
